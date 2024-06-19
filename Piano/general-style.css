@@ -1,0 +1,99 @@
+/* Reset default styles and set up box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(182, 182, 182);
+  background-image: url("/Piano/orion-nebula-ga2ecc6324_1920.jpg");
+  font-family: "Noto Serif", serif; /* Default font family */
+  overflow: hidden; /* Prevent scrolling on the body */
+}
+
+/* Piano container */
+#paino {
+  position: relative;
+}
+
+/* Heading styles */
+.heading {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5rem;
+  color: white;
+  text-shadow: 5px 2px 0 rgb(0, 0, 0);
+  letter-spacing: 10px;
+}
+
+/* Footer styles */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 6px 0;
+  font-size: 1.2rem;
+  background-color: #0c0014;
+  width: 100%;
+  text-align: center;
+}
+
+/* Keys container */
+.keys {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px; /* Adjust as needed */
+}
+
+/* Styling for black keys */
+.black-keys {
+  position: relative;
+}
+
+.black-key {
+  width: 40px;
+  height: 150px;
+  background-color: black;
+  margin: 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensure black keys appear above white keys */
+}
+
+.shadow-black {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Styling for white keys */
+.white-keys {
+  display: flex;
+}
+
+.white-key {
+  width: 60px;
+  height: 250px;
+  background-color: white;
+  border: 1px solid black; /* Optional: add border for visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Key label text */
+.key-show {
+  font-size: 1.2rem;
+  color: black; /* Adjust as per visibility against white key */
+}
